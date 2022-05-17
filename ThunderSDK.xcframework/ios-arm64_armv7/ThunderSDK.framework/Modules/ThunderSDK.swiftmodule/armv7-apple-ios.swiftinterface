@@ -30,7 +30,7 @@ extension ThunderSDK.ThunderBuilderError : Foundation.LocalizedError {
 }
 @_hasMissingDesignatedInitializers public class ATThunderSDK : ThunderSDK.Thunder {
   public static let shared: ThunderSDK.Thunder
-  public func intialize(with launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  public func initialize(with launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
   public func start(with consent: ThunderSDK.AdTonosConsent)
   public var isStarted: Swift.Bool {
     get
@@ -57,7 +57,7 @@ public protocol ThunderObserver : AnyObject {
   }
 }
 public protocol BaseThunder {
-  func intialize(with launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  func initialize(with launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
   func start(with consent: ThunderSDK.AdTonosConsent)
   var isStarted: Swift.Bool { get }
   func loadLatestConsent() -> ThunderSDK.AdTonosConsent?
@@ -65,9 +65,19 @@ public protocol BaseThunder {
   func createBuilder() -> ThunderSDK.ThunderVastURLBuilder
   func dispose()
 }
+public enum VastAdType : Swift.String {
+  case regular
+  case bannerAd
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public protocol ThunderVastURLBuilder {
   func set(lang: Swift.String?) -> Self
   func set(adTonosKey: Swift.String) -> Self
+  func set(adType: ThunderSDK.VastAdType?) -> Self
   func build() throws -> Swift.String
 }
 public protocol ThunderObservable {
@@ -87,7 +97,7 @@ public enum ThunderError {
 }
 @_hasMissingDesignatedInitializers @objc public class ObjC_ThunderSDK : ObjectiveC.NSObject {
   @objc public static let shared: ThunderSDK.ObjC_ThunderSDK
-  @objc public func intialize(with launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  @objc public func initialize(with launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
   @objc public func start(with consent: Swift.Int32)
   @objc public var isStarted: Swift.Bool {
     @objc get
@@ -96,6 +106,7 @@ public enum ThunderError {
   @objc public func loadLatestConsent() -> Swift.Int32
   @objc public func createBuilder() -> Swift.Int32
   @objc public func set(language: Swift.String?, for builderId: Swift.Int32)
+  @objc public func set(adType: Swift.String?, for builderId: Swift.Int32)
   @objc public func set(key: Swift.String?, for builderId: Swift.Int32)
   @objc public func createURL(with builderId: Swift.Int32) -> Swift.String
   @objc public func dispose()
@@ -106,5 +117,8 @@ extension ThunderSDK.ThunderBuilderError : Swift.Hashable {}
 extension ThunderSDK.AdTonosConsent : Swift.Equatable {}
 extension ThunderSDK.AdTonosConsent : Swift.Hashable {}
 extension ThunderSDK.AdTonosConsent : Swift.RawRepresentable {}
+extension ThunderSDK.VastAdType : Swift.Equatable {}
+extension ThunderSDK.VastAdType : Swift.Hashable {}
+extension ThunderSDK.VastAdType : Swift.RawRepresentable {}
 extension ThunderSDK.ThunderError : Swift.Equatable {}
 extension ThunderSDK.ThunderError : Swift.Hashable {}

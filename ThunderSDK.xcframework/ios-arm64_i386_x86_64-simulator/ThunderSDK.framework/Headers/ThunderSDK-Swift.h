@@ -277,7 +277,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ObjC_Thunder
 /// 1.0.0
 /// \param launchOptions Options passed during application launch.
 ///
-- (void)intializeWith:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
+- (void)initializeWith:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
 /// Starts the SDK with consent for personalization.
 /// Invokes any required system permissions.
 /// Uses <code>start(with:)</code> to save the consent.
@@ -324,6 +324,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ObjC_Thunder
 /// \param buidlerId The builder id that is returned in the <code>ObjC_ThunderSDK/createBuilder()</code> method.
 ///
 - (void)setWithLanguage:(NSString * _Nullable)language for:(int32_t)builderId;
+/// Sets adType.
+/// since:
+/// 1.1.0
+/// \param adType available input: ‘regular’, ‘bannerAd’
+///
+/// \param buidlerId The builder id that is returned in the <code>ObjC_ThunderSDK/createBuilder()</code> method.
+///
+- (void)setWithAdType:(NSString * _Nullable)adType for:(int32_t)builderId;
 /// Sets developer key.
 /// since:
 /// 1.0.0
@@ -636,7 +644,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ObjC_Thunder
 /// 1.0.0
 /// \param launchOptions Options passed during application launch.
 ///
-- (void)intializeWith:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
+- (void)initializeWith:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
 /// Starts the SDK with consent for personalization.
 /// Invokes any required system permissions.
 /// Uses <code>start(with:)</code> to save the consent.
@@ -683,6 +691,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ObjC_Thunder
 /// \param buidlerId The builder id that is returned in the <code>ObjC_ThunderSDK/createBuilder()</code> method.
 ///
 - (void)setWithLanguage:(NSString * _Nullable)language for:(int32_t)builderId;
+/// Sets adType.
+/// since:
+/// 1.1.0
+/// \param adType available input: ‘regular’, ‘bannerAd’
+///
+/// \param buidlerId The builder id that is returned in the <code>ObjC_ThunderSDK/createBuilder()</code> method.
+///
+- (void)setWithAdType:(NSString * _Nullable)adType for:(int32_t)builderId;
 /// Sets developer key.
 /// since:
 /// 1.0.0
@@ -995,7 +1011,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ObjC_Thunder
 /// 1.0.0
 /// \param launchOptions Options passed during application launch.
 ///
-- (void)intializeWith:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
+- (void)initializeWith:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
 /// Starts the SDK with consent for personalization.
 /// Invokes any required system permissions.
 /// Uses <code>start(with:)</code> to save the consent.
@@ -1042,6 +1058,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ObjC_Thunder
 /// \param buidlerId The builder id that is returned in the <code>ObjC_ThunderSDK/createBuilder()</code> method.
 ///
 - (void)setWithLanguage:(NSString * _Nullable)language for:(int32_t)builderId;
+/// Sets adType.
+/// since:
+/// 1.1.0
+/// \param adType available input: ‘regular’, ‘bannerAd’
+///
+/// \param buidlerId The builder id that is returned in the <code>ObjC_ThunderSDK/createBuilder()</code> method.
+///
+- (void)setWithAdType:(NSString * _Nullable)adType for:(int32_t)builderId;
 /// Sets developer key.
 /// since:
 /// 1.0.0
