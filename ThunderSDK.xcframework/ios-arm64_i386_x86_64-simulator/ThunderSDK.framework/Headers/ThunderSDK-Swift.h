@@ -327,11 +327,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ObjC_Thunder
 /// Sets adType.
 /// since:
 /// 1.1.0
-/// \param adType available input: ‘regular’, ‘bannerAd’
+/// \param adType <code>0</code> is equivalent to  <code>VastAdType/regular</code>
+/// <code>1</code> is equivalent to <code>VastAdType/bannerAd</code>
 ///
 /// \param buidlerId The builder id that is returned in the <code>ObjC_ThunderSDK/createBuilder()</code> method.
 ///
-- (void)setWithAdType:(NSString * _Nullable)adType for:(int32_t)builderId;
+- (void)setWithAdType:(int32_t)adType for:(int32_t)builderId;
 /// Sets developer key.
 /// since:
 /// 1.0.0
@@ -694,11 +695,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ObjC_Thunder
 /// Sets adType.
 /// since:
 /// 1.1.0
-/// \param adType available input: ‘regular’, ‘bannerAd’
+/// \param adType <code>0</code> is equivalent to  <code>VastAdType/regular</code>
+/// <code>1</code> is equivalent to <code>VastAdType/bannerAd</code>
 ///
 /// \param buidlerId The builder id that is returned in the <code>ObjC_ThunderSDK/createBuilder()</code> method.
 ///
-- (void)setWithAdType:(NSString * _Nullable)adType for:(int32_t)builderId;
+- (void)setWithAdType:(int32_t)adType for:(int32_t)builderId;
 /// Sets developer key.
 /// since:
 /// 1.0.0
@@ -1061,11 +1063,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ObjC_Thunder
 /// Sets adType.
 /// since:
 /// 1.1.0
-/// \param adType available input: ‘regular’, ‘bannerAd’
+/// \param adType <code>0</code> is equivalent to  <code>VastAdType/regular</code>
+/// <code>1</code> is equivalent to <code>VastAdType/bannerAd</code>
 ///
 /// \param buidlerId The builder id that is returned in the <code>ObjC_ThunderSDK/createBuilder()</code> method.
 ///
-- (void)setWithAdType:(NSString * _Nullable)adType for:(int32_t)builderId;
+- (void)setWithAdType:(int32_t)adType for:(int32_t)builderId;
 /// Sets developer key.
 /// since:
 /// 1.0.0
