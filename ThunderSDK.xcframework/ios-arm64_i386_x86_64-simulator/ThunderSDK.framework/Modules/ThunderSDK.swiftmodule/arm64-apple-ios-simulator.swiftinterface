@@ -106,7 +106,7 @@ public enum ThunderError {
   @objc public func loadLatestConsent() -> Swift.Int32
   @objc public func createBuilder() -> Swift.Int32
   @objc public func set(language: Swift.String?, for builderId: Swift.Int32)
-  @objc public func set(adType: Swift.String?, for builderId: Swift.Int32)
+  @objc public func set(adType: Swift.Int32, for builderId: Swift.Int32)
   @objc public func set(key: Swift.String?, for builderId: Swift.Int32)
   @objc public func createURL(with builderId: Swift.Int32) -> Swift.String
   @objc public func dispose()
