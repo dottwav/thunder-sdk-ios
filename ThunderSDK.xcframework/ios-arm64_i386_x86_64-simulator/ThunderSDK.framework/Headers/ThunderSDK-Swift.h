@@ -254,9 +254,11 @@ typedef SWIFT_ENUM(NSInteger, AdTonosConsent, open) {
 ///     <code>PRECISE_GEOLOCATION</code> - Allow use of precise geolocation data (within 500 metres accuracy).
 ///   </li>
 /// </ul>
-  AdTonosConsentAllowAll = 0,
-/// Personalization is not allowed.
-  AdTonosConsentNone = 1,
+  AdTonosConsentTargetingWithAllConsents = 0,
+/// Targeting  without consents is limited.
+  AdTonosConsentTargetingWithoutConsents = 1,
+/// Targeting is disabled.
+  AdTonosConsentTargetingDisabled = -1,
 };
 
 
@@ -283,9 +285,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ObjC_Thunder
 /// Uses <code>start(with:)</code> to save the consent.
 /// since:
 /// 1.0.0
-/// \param consent Positive or negative consent for ads personalization.
-/// <code>0</code> is equivalent to  <code>AdTonosConsent/allowAll</code>
-/// <code>1</code> is equivalent to <code>AdTonosConsent/none</code>
+/// \param consents Positive or negative tracking consents for ads personalization or turning off tracking.
+/// <code>0</code> is equivalent to  <code>AdTonosConsent/targetingWithAllConsents</code>
+/// <code>1</code> is equivalent to <code>AdTonosConsent/targetingWithoutConsents</code>
+/// <code>-1</code> is equivalent to <code>AdTonosConsent/targetingDisabled</code>
 ///
 - (void)startWith:(int32_t)consent;
 /// A Boolean that indicates whether an SDK is started.
@@ -294,20 +297,22 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ObjC_Thunder
 @property (nonatomic, readonly) BOOL isStarted;
 /// Saves consent to use between application launches.
 /// since:
-/// 1.0.0
-/// \param consent Positive or negative consent for ads personalization.
-/// <code>0</code> is equivalent to  <code>AdTonosConsent/allowAll</code>
-/// <code>1</code> is equivalent to <code>AdTonosConsent/none</code>
+/// 1.0.4
+/// \param consents Positive or negative tracking consents for ads personalization or turning off tracking.
+/// <code>0</code> is equivalent to  <code>AdTonosConsent/targetingWithAllConsents</code>
+/// <code>1</code> is equivalent to <code>AdTonosConsent/targetingWithoutConsents</code>
+/// <code>-1</code> is equivalent to <code>AdTonosConsent/targetingDisabled</code>
 ///
 - (void)saveWithConsent:(int32_t)consent;
-/// Loads previously used consent for SDK start or recently saved consent if start was not invoked yet.
+/// Loads previously used tracking settings for SDK start or recently saved consent if start was not invoked yet.
 /// since:
-/// 1.0.0
+/// 1.0.4
 ///
 /// returns:
-/// <code>0</code> when consents are set to <code>AdTonosConsent/allowAll</code>,
-/// <code>1</code> when consents are set to <code>AdTonosConsent/none</code>,
-/// <code>-1</code> when there are no stored consent yet.
+/// <code>0</code> when tracking settings are set to <code>AdTonosConsent/targetingWithAllConsents</code>,
+/// <code>1</code> when tracking settings are set to <code>AdTonosConsent/targetingWithoutConsents</code>,
+/// <code>-1</code> when tracking settings are set to <code>AdTonosConsent/targetingDisabled</code>,
+/// <code>-99</code> when there are no stored tracking settings yet.
 - (int32_t)loadLatestConsent SWIFT_WARN_UNUSED_RESULT;
 /// Creates an empty builder instance and return id for further usage.
 /// since:
@@ -622,9 +627,11 @@ typedef SWIFT_ENUM(NSInteger, AdTonosConsent, open) {
 ///     <code>PRECISE_GEOLOCATION</code> - Allow use of precise geolocation data (within 500 metres accuracy).
 ///   </li>
 /// </ul>
-  AdTonosConsentAllowAll = 0,
-/// Personalization is not allowed.
-  AdTonosConsentNone = 1,
+  AdTonosConsentTargetingWithAllConsents = 0,
+/// Targeting  without consents is limited.
+  AdTonosConsentTargetingWithoutConsents = 1,
+/// Targeting is disabled.
+  AdTonosConsentTargetingDisabled = -1,
 };
 
 
@@ -651,9 +658,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ObjC_Thunder
 /// Uses <code>start(with:)</code> to save the consent.
 /// since:
 /// 1.0.0
-/// \param consent Positive or negative consent for ads personalization.
-/// <code>0</code> is equivalent to  <code>AdTonosConsent/allowAll</code>
-/// <code>1</code> is equivalent to <code>AdTonosConsent/none</code>
+/// \param consents Positive or negative tracking consents for ads personalization or turning off tracking.
+/// <code>0</code> is equivalent to  <code>AdTonosConsent/targetingWithAllConsents</code>
+/// <code>1</code> is equivalent to <code>AdTonosConsent/targetingWithoutConsents</code>
+/// <code>-1</code> is equivalent to <code>AdTonosConsent/targetingDisabled</code>
 ///
 - (void)startWith:(int32_t)consent;
 /// A Boolean that indicates whether an SDK is started.
@@ -662,20 +670,22 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ObjC_Thunder
 @property (nonatomic, readonly) BOOL isStarted;
 /// Saves consent to use between application launches.
 /// since:
-/// 1.0.0
-/// \param consent Positive or negative consent for ads personalization.
-/// <code>0</code> is equivalent to  <code>AdTonosConsent/allowAll</code>
-/// <code>1</code> is equivalent to <code>AdTonosConsent/none</code>
+/// 1.0.4
+/// \param consents Positive or negative tracking consents for ads personalization or turning off tracking.
+/// <code>0</code> is equivalent to  <code>AdTonosConsent/targetingWithAllConsents</code>
+/// <code>1</code> is equivalent to <code>AdTonosConsent/targetingWithoutConsents</code>
+/// <code>-1</code> is equivalent to <code>AdTonosConsent/targetingDisabled</code>
 ///
 - (void)saveWithConsent:(int32_t)consent;
-/// Loads previously used consent for SDK start or recently saved consent if start was not invoked yet.
+/// Loads previously used tracking settings for SDK start or recently saved consent if start was not invoked yet.
 /// since:
-/// 1.0.0
+/// 1.0.4
 ///
 /// returns:
-/// <code>0</code> when consents are set to <code>AdTonosConsent/allowAll</code>,
-/// <code>1</code> when consents are set to <code>AdTonosConsent/none</code>,
-/// <code>-1</code> when there are no stored consent yet.
+/// <code>0</code> when tracking settings are set to <code>AdTonosConsent/targetingWithAllConsents</code>,
+/// <code>1</code> when tracking settings are set to <code>AdTonosConsent/targetingWithoutConsents</code>,
+/// <code>-1</code> when tracking settings are set to <code>AdTonosConsent/targetingDisabled</code>,
+/// <code>-99</code> when there are no stored tracking settings yet.
 - (int32_t)loadLatestConsent SWIFT_WARN_UNUSED_RESULT;
 /// Creates an empty builder instance and return id for further usage.
 /// since:
@@ -990,9 +1000,11 @@ typedef SWIFT_ENUM(NSInteger, AdTonosConsent, open) {
 ///     <code>PRECISE_GEOLOCATION</code> - Allow use of precise geolocation data (within 500 metres accuracy).
 ///   </li>
 /// </ul>
-  AdTonosConsentAllowAll = 0,
-/// Personalization is not allowed.
-  AdTonosConsentNone = 1,
+  AdTonosConsentTargetingWithAllConsents = 0,
+/// Targeting  without consents is limited.
+  AdTonosConsentTargetingWithoutConsents = 1,
+/// Targeting is disabled.
+  AdTonosConsentTargetingDisabled = -1,
 };
 
 
@@ -1019,9 +1031,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ObjC_Thunder
 /// Uses <code>start(with:)</code> to save the consent.
 /// since:
 /// 1.0.0
-/// \param consent Positive or negative consent for ads personalization.
-/// <code>0</code> is equivalent to  <code>AdTonosConsent/allowAll</code>
-/// <code>1</code> is equivalent to <code>AdTonosConsent/none</code>
+/// \param consents Positive or negative tracking consents for ads personalization or turning off tracking.
+/// <code>0</code> is equivalent to  <code>AdTonosConsent/targetingWithAllConsents</code>
+/// <code>1</code> is equivalent to <code>AdTonosConsent/targetingWithoutConsents</code>
+/// <code>-1</code> is equivalent to <code>AdTonosConsent/targetingDisabled</code>
 ///
 - (void)startWith:(int32_t)consent;
 /// A Boolean that indicates whether an SDK is started.
@@ -1030,20 +1043,22 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ObjC_Thunder
 @property (nonatomic, readonly) BOOL isStarted;
 /// Saves consent to use between application launches.
 /// since:
-/// 1.0.0
-/// \param consent Positive or negative consent for ads personalization.
-/// <code>0</code> is equivalent to  <code>AdTonosConsent/allowAll</code>
-/// <code>1</code> is equivalent to <code>AdTonosConsent/none</code>
+/// 1.0.4
+/// \param consents Positive or negative tracking consents for ads personalization or turning off tracking.
+/// <code>0</code> is equivalent to  <code>AdTonosConsent/targetingWithAllConsents</code>
+/// <code>1</code> is equivalent to <code>AdTonosConsent/targetingWithoutConsents</code>
+/// <code>-1</code> is equivalent to <code>AdTonosConsent/targetingDisabled</code>
 ///
 - (void)saveWithConsent:(int32_t)consent;
-/// Loads previously used consent for SDK start or recently saved consent if start was not invoked yet.
+/// Loads previously used tracking settings for SDK start or recently saved consent if start was not invoked yet.
 /// since:
-/// 1.0.0
+/// 1.0.4
 ///
 /// returns:
-/// <code>0</code> when consents are set to <code>AdTonosConsent/allowAll</code>,
-/// <code>1</code> when consents are set to <code>AdTonosConsent/none</code>,
-/// <code>-1</code> when there are no stored consent yet.
+/// <code>0</code> when tracking settings are set to <code>AdTonosConsent/targetingWithAllConsents</code>,
+/// <code>1</code> when tracking settings are set to <code>AdTonosConsent/targetingWithoutConsents</code>,
+/// <code>-1</code> when tracking settings are set to <code>AdTonosConsent/targetingDisabled</code>,
+/// <code>-99</code> when there are no stored tracking settings yet.
 - (int32_t)loadLatestConsent SWIFT_WARN_UNUSED_RESULT;
 /// Creates an empty builder instance and return id for further usage.
 /// since:

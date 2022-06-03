@@ -24,7 +24,7 @@ target "BasicExample" do
    pod 'ThunderSDK'
 end
 ```
-then install pods with the command
+Then install pods with the command
 
 ```bash
 pod install
@@ -32,7 +32,7 @@ pod install
 ![alt text](./docs/images/pods1.png)
 
 ## Permissions
-Add the following keys to the project’s `Info.plist`.
+* In case the application will use tracking (e.g. NumberEight), add the following keys to the project’s `Info.plist`.
 
        
 ```xml
@@ -47,6 +47,9 @@ Add the following keys to the project’s `Info.plist`.
 <string>This identifier will be used to deliver personalized ads to you.</string>
 ```
 ![alt text](./docs/images/permissions1.png)
+
+* In case the application will not use tracking, no keys need to be added.
+
 ## App Privacy Declarations
 
 Since the release of iOS 14.5, developers must now declare the data they use in the App Privacy section of App Store Connect.
@@ -57,8 +60,8 @@ To work properly, the SDK needs consents. Depending on the region, please ask th
 In some regions, such as the EU, consent is required to allow third-parties to store data on users’ devices for example.
 
 
-### Consents set to allow all
- Below is a list of what is included in the `AdTonosConsent.allowAll` option<br />
+### Consents set to .targetingWithAllConsents
+ Below is a list of what is included in the `AdTonosConsent.targetingWithAllConsents` option:<br />
 `PROCESSING` - Allow processing of data.<br />
 `SENSOR_ACCESS` - Allow use of the device’s sensor data.<br />
 `STORAGE` - Allow storing and accessing information on the device.<br />
@@ -72,8 +75,11 @@ In some regions, such as the EU, consent is required to allow third-parties to s
 `USE_FOR_DIAGNOSTICS` - Allow processing of diagnostic information using an independent identifier to ensure the correct operation of systems.<br />
 `PRECISE_GEOLOCATION` - Allow use of precise geolocation data (within 500 metres accuracy).
 
-### Consent set to none
-It is possible to start adTonos with consents set to `AdTonosConsent.none`, but it will not collect data about the user then, so the advertisement will not be personalized appropriately to the user.
+### Consents set to .targetingWithoutConsents
+It is possible to start adTonos with consents set to `AdTonosConsent.targetingWithoutConsents`, but it will not collect data about the user then, so the advertisement will not be personalized appropriately to the user.
+
+### Consents set to .targetingDisabled
+It is possible to start adTonos with `AdTonosConsent.targetingDisabled`, in this case no targeting will be enabled. The advertisement will not be in any way personalized for the user.
 
 ## Start SDK and generate vast link
 
@@ -109,10 +115,13 @@ The library requires certain permissions and user consents for data collection. 
 
 > Important: `start` must be called when the application is active, otherwise the idfa permission popup will not be shown to the user.<br />
 
-Pass the consent `.allowAll` or `.none` as a function parameter. 
+Pass the consent as a function parameter:
+
+* In case NumberEight will be used `.targetingWithAllConsents` or `.targetingWithoutConsents`, 
+* In case NumberEight will **not** be used  `.targetingDisabled`.
 
 ```swift
-ATThunderSDK.shared.start(with: .allowAll)
+ATThunderSDK.shared.start(with: .targetingWithAllConsents)
 ```
 To check if *ThunderSDK* is started it is possible to use the `isStarted` variable.
 
@@ -125,8 +134,13 @@ _ = ATThunderSDK.shared.isStarted
 In case you want to change the consents, you can use the method `save`.
 
 ```swift
-ATThunderSDK.shared.save(consent: .none)
+ATThunderSDK.shared.save(consent: .targetingWithoutConsents)
 ```
+
+In a situation where previously tracking was disabled, then consent will be given, which activates tracking, system permissions will be shown.
+
+>If you use tracking, remember to add the keys to Info.plist, which are described above.
+
 **Load consents**
 
 You can also get the last set consents using the method `loadLatestConsent`.
@@ -143,10 +157,13 @@ Moreover if you want to use a language other than preferred in the system, you c
 
 >Language must be provided in **ISO-639-1** or **ISO-639-2** format. 
 
+It is also possible to define the type of advertisement. Possible types are **.regular**, which is the default, and **.bannerAd**.
+
 ```swift
 let vastLink = ATThunderSDK.shared.createBuilder()
                       .set(adTonosKey: "XXXXX") //Sets developer key.
                       .set(lang: "en") //Sets user language if different than a system defined
+                      .set(adType: .regular) //Sets adType (.regular, .bannerAd)
                       .build()
    
 ```
@@ -174,7 +191,7 @@ extension YourViewController: ThunderObserver {
  }
 ```
 
-an observer should be added, 
+An observer should be added 
 
 ```swift
 ATThunderSDK.shared.add(thunderObserver: self)

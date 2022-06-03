@@ -48,8 +48,9 @@ public protocol ThunderObserver : AnyObject {
   func onStarted(success: Swift.Bool, error: ThunderSDK.ThunderError?)
 }
 @objc public enum AdTonosConsent : Swift.Int {
-  case allowAll
-  case none
+  case targetingWithAllConsents = 0
+  case targetingWithoutConsents = 1
+  case targetingDisabled = -1
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
