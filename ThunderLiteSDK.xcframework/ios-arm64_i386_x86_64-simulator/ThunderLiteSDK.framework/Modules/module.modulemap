@@ -1,4 +1,0 @@
-framework module ThunderLiteSDK {
-  header "ThunderLiteSDK-Swift.h"
-  requires objc
-}

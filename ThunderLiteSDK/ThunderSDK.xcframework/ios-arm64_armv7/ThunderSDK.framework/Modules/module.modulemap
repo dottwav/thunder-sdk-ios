@@ -1,0 +1,11 @@
+framework module ThunderSDK {
+  umbrella header "ThunderSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module ThunderSDK.Swift {
+    header "ThunderSDK-Swift.h"
+    requires objc
+}
