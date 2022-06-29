@@ -31,6 +31,7 @@ extension ThunderSDK.ThunderBuilderError : Foundation.LocalizedError {
 @_hasMissingDesignatedInitializers public class ATThunderSDK : ThunderSDK.Thunder {
   public static let shared: ThunderSDK.Thunder
   public func initialize(with launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  public func setNumberEightKey(_ key: Swift.String)
   public func start(with consent: ThunderSDK.AdTonosConsent)
   public var isStarted: Swift.Bool {
     get
@@ -58,6 +59,7 @@ public protocol ThunderObserver : AnyObject {
 }
 public protocol BaseThunder {
   func initialize(with launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  func setNumberEightKey(_ key: Swift.String)
   func start(with consent: ThunderSDK.AdTonosConsent)
   var isStarted: Swift.Bool { get }
   func loadLatestConsent() -> ThunderSDK.AdTonosConsent?
@@ -77,7 +79,7 @@ public enum VastAdType : Swift.String {
 public protocol ThunderVastURLBuilder {
   func set(lang: Swift.String?) -> Self
   func set(adTonosKey: Swift.String) -> Self
-  func set(adType: ThunderSDK.VastAdType?) -> Self
+  func set(adType: ThunderSDK.VastAdType) -> Self
   func build() throws -> Swift.String
 }
 public protocol ThunderObservable {
@@ -98,6 +100,7 @@ public enum ThunderError {
 @_hasMissingDesignatedInitializers @objc public class ObjC_ThunderSDK : ObjectiveC.NSObject {
   @objc public static let shared: ThunderSDK.ObjC_ThunderSDK
   @objc public func initialize(with launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  @objc public func setNumberEightKey(_ key: Swift.String)
   @objc public func start(with consent: Swift.Int32)
   @objc public var isStarted: Swift.Bool {
     @objc get

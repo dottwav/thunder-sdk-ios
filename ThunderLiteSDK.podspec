@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
     s.name              = 'ThunderLiteSDK'
-    s.version           = '1.0.6'
+    s.version           = '1.0.7'
     s.summary           = 'SDK for your in-app audio advertisement preparation'
     s.homepage          = 'https://www.adtonos.com'
     s.authors           = { 'Mateusz Wojnar' => 'mateusz.wojnar@siroccomobile.com', 'Aleksander Olszewski' => 'aleksander.olszewski@siroccomobile.com' }

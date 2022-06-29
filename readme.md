@@ -12,10 +12,24 @@ Below is a tutorial on how to add the library to your project and how to use it.
 * iOS 11 or greater
 
 ## Installation
+### Choose SDK versions
+You have to decide which version of SDK you want to use. Two available:
 
-[CocoaPods](https://guides.cocoapods.org/using/using-cocoapods) is used to integrate `ThunderSDK` into existing iOS project.
+**ThunderSDK** - contains SDK functionality + extra user targeting provided by [NumberEight](https://numbereight.ai/); this version will ask user for extra permissions (i.e. location)
+
+> [NumberEight](https://numbereight.ai/) is an AI software, which predicts the live context of a user (e.g. running, commuting) from sensors present in the device, and then packages them neatly into ID-less behavioural audiences (e.g. joggers, frequent shoppers).
+ 
+
+**ThunderLiteSDK** - contains SDK functionality without extra user targeting; this version won't ask user for extra permissions
+
+Import to your Xcode project `ThunderSDK` or `ThunderLiteSDK` according to your decision.
+
+### Cocoapods
+[CocoaPods](https://guides.cocoapods.org/using/using-cocoapods) is used to integrate `ThunderSDK` and `ThunderLiteSDK` into existing iOS project.
 
 In the same directory as your project file, create Podfile, and add the following configuration:
+
+* **ThunderSDK**
 
 ```ruby
 platform :ios, '10' # or any other deployment target
@@ -24,6 +38,17 @@ target "BasicExample" do
    pod 'ThunderSDK'
 end
 ```
+
+* **ThunderLiteSDK**
+
+```ruby
+platform :ios, '10' # or any other deployment target
+
+target "BasicExample" do
+   pod 'ThunderLiteSDK'
+end
+```
+
 Then install pods with the command
 
 ```bash
@@ -32,7 +57,10 @@ pod install
 ![alt text](./docs/images/pods1.png)
 
 ## Permissions
-* In case the application will use tracking (e.g. NumberEight), add the following keys to the project’s `Info.plist`.
+Add the following keys to the project’s `Info.plist`.
+Although the use of location is optional for the SDK, the keys must still be supplied to pass Apple’s App Review process. 
+
+If you already have these keys in your Info.plist, then you can skip this step.
 
        
 ```xml
@@ -43,14 +71,13 @@ pod install
 <key>NSMotionUsageDescription</key>
 <string>To determine physical interaction with the device while using the app.</string>
 <!-- User tracking usage descriptions -->
-<key>NSUserTrackingUsageDescription</key>
+<key>NSUserprofilingUsageDescription</key>
 <string>This identifier will be used to deliver personalized ads to you.</string>
 ```
 ![alt text](./docs/images/permissions1.png)
 
-* In case the application will not use tracking, no keys need to be added.
-
 ## App Privacy Declarations
+> Only if you are using **ThunderSDK**, if you are using **ThunderLiteSDK** you can skip this section.
 
 Since the release of iOS 14.5, developers must now declare the data they use in the App Privacy section of App Store Connect.
 In order to assist you in declaring the correct data being collected, we have created an [AppStore Data Guide](./docs/guides/appStoreDataGuide.md).
@@ -60,8 +87,8 @@ To work properly, the SDK needs consents. Depending on the region, please ask th
 In some regions, such as the EU, consent is required to allow third-parties to store data on users’ devices for example.
 
 
-### Consents set to .targetingWithAllConsents
- Below is a list of what is included in the `AdTonosConsent.targetingWithAllConsents` option:<br />
+### Consents set to .allowAll
+ Below is a list of what is included in the `AdTonosConsent.allowAll` option:<br />
 `PROCESSING` - Allow processing of data.<br />
 `SENSOR_ACCESS` - Allow use of the device’s sensor data.<br />
 `STORAGE` - Allow storing and accessing information on the device.<br />
@@ -75,11 +102,8 @@ In some regions, such as the EU, consent is required to allow third-parties to s
 `USE_FOR_DIAGNOSTICS` - Allow processing of diagnostic information using an independent identifier to ensure the correct operation of systems.<br />
 `PRECISE_GEOLOCATION` - Allow use of precise geolocation data (within 500 metres accuracy).
 
-### Consents set to .targetingWithoutConsents
-It is possible to start adTonos with consents set to `AdTonosConsent.targetingWithoutConsents`, but it will not collect data about the user then, so the advertisement will not be personalized appropriately to the user.
-
-### Consents set to .targetingDisabled
-It is possible to start adTonos with `AdTonosConsent.targetingDisabled`, in this case no targeting will be enabled. The advertisement will not be in any way personalized for the user.
+### Consents set to .none
+It is possible to start SDK with consents set to `AdTonosConsent.none`, but it will not collect data about the user then, so the advertisement will not be personalized appropriately to the user.
 
 ## Start SDK and generate vast link
 
@@ -109,6 +133,17 @@ func application(_ application: UIApplication, willFinishLaunchingWithOptions la
 ATThunderSDK.shared.initialize(with: nil)
 ```
 
+### Set NumberEight key
+**ThunderLiteSDK** - skip this step.
+
+**ThunderSDK** - set the NumberEight key you get from AdTonos with the method:
+
+```swift
+ATThunderSDK.shared.setNumberEightKey("XXXX")
+```
+
+> The method must be called before the start() method
+
 ### Start
 
 The library requires certain permissions and user consents for data collection. Therefore, one of the initial screens should show the user the terms and conditions containing the necessary information about the use and processing of personal data. This is done when the user first interacts with the application, so this is a good time to call the Start method. The method takes the consent flag as a parameter and then asks the user for the system permissions necessary for the application to work. The `start` method must be called every time the application starts. Additionally, the `loadLatestConsents` method can be used, which returns the most recently granted consents. Below is an example of how this can be done:
@@ -117,11 +152,11 @@ The library requires certain permissions and user consents for data collection. 
 
 Pass the consent as a function parameter:
 
-* In case NumberEight will be used `.targetingWithAllConsents` or `.targetingWithoutConsents`, 
-* In case NumberEight will **not** be used  `.targetingDisabled`.
+* In case NumberEight will be used `.allowAll`.
+* In case NumberEight will **not** be used  `.none`.
 
 ```swift
-ATThunderSDK.shared.start(with: .targetingWithAllConsents)
+ATThunderSDK.shared.start(with: .allowAll)
 ```
 To check if *ThunderSDK* is started it is possible to use the `isStarted` variable.
 
@@ -134,12 +169,12 @@ _ = ATThunderSDK.shared.isStarted
 In case you want to change the consents, you can use the method `save`.
 
 ```swift
-ATThunderSDK.shared.save(consent: .targetingWithoutConsents)
+ATThunderSDK.shared.save(consent: .none)
 ```
 
-In a situation where previously tracking was disabled, then consent will be given, which activates tracking, system permissions will be shown.
+In a situation where previously profiling was disabled, then consent will be given, which activates profiling, system permissions will be shown.
 
->If you use tracking, remember to add the keys to Info.plist, which are described above.
+>Remember to add the keys to Info.plist, which are described above.
 
 **Load consents**
 

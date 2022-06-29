@@ -260,8 +260,8 @@ typedef SWIFT_ENUM(NSInteger, AdTonosConsent, open) {
 };
 
 
-@class NSNumber;
 @class NSString;
+@class NSNumber;
 
 /// Allow access to ThunderSDK through Objective-C
 SWIFT_CLASS("_TtC10ThunderSDK15ObjC_ThunderSDK")
@@ -277,6 +277,13 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ObjC_Thunder
 /// \param launchOptions Options passed during application launch.
 ///
 - (void)initializeWith:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
+/// Sets the NumberEight key.
+/// The key must be set before invoking the start method.
+/// since:
+/// 1.0.7
+/// \param key NumberEight key, which you can get from AdTonos.
+///
+- (void)setNumberEightKey:(NSString * _Nonnull)key;
 /// Starts the SDK with consent for personalization.
 /// Invokes any required system permissions.
 /// Uses <code>start(with:)</code> to save the consent.
@@ -627,8 +634,8 @@ typedef SWIFT_ENUM(NSInteger, AdTonosConsent, open) {
 };
 
 
-@class NSNumber;
 @class NSString;
+@class NSNumber;
 
 /// Allow access to ThunderSDK through Objective-C
 SWIFT_CLASS("_TtC10ThunderSDK15ObjC_ThunderSDK")
@@ -644,6 +651,13 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ObjC_Thunder
 /// \param launchOptions Options passed during application launch.
 ///
 - (void)initializeWith:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
+/// Sets the NumberEight key.
+/// The key must be set before invoking the start method.
+/// since:
+/// 1.0.7
+/// \param key NumberEight key, which you can get from AdTonos.
+///
+- (void)setNumberEightKey:(NSString * _Nonnull)key;
 /// Starts the SDK with consent for personalization.
 /// Invokes any required system permissions.
 /// Uses <code>start(with:)</code> to save the consent.
@@ -994,8 +1008,8 @@ typedef SWIFT_ENUM(NSInteger, AdTonosConsent, open) {
 };
 
 
-@class NSNumber;
 @class NSString;
+@class NSNumber;
 
 /// Allow access to ThunderSDK through Objective-C
 SWIFT_CLASS("_TtC10ThunderSDK15ObjC_ThunderSDK")
@@ -1011,6 +1025,13 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ObjC_Thunder
 /// \param launchOptions Options passed during application launch.
 ///
 - (void)initializeWith:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
+/// Sets the NumberEight key.
+/// The key must be set before invoking the start method.
+/// since:
+/// 1.0.7
+/// \param key NumberEight key, which you can get from AdTonos.
+///
+- (void)setNumberEightKey:(NSString * _Nonnull)key;
 /// Starts the SDK with consent for personalization.
 /// Invokes any required system permissions.
 /// Uses <code>start(with:)</code> to save the consent.

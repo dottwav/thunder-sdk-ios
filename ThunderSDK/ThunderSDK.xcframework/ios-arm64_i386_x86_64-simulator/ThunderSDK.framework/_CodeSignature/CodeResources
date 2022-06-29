@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/ThunderSDK-Swift.h</key>
 		<data>
-		MKM4avFR6R12YC23vVCDYPmGfd4=
+		EyeIaTq7EbxWJtM0mfjTiakI1OY=
 		</data>
 		<key>Headers/ThunderSDK.h</key>
 		<data>
@@ -18,75 +18,75 @@
 		</data>
 		<key>Modules/ThunderSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		s+x5wU/qg7R3P3BCeLBL0GSqr4M=
+		l2anUoeU1ZHW1Nr3daucAexGbTM=
 		</data>
 		<key>Modules/ThunderSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Cf6HIBceWf77xa/gBOAdLNS/Y4Y=
+		d33Td7pPSpipPM5zu5z4+q+A/fY=
 		</data>
 		<key>Modules/ThunderSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		2YpzeJ/7yqGJAHFAnn48KHOM+NU=
+		VSGs2bKUgn0Pg1AjRGY1a03xmoM=
 		</data>
 		<key>Modules/ThunderSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		s+x5wU/qg7R3P3BCeLBL0GSqr4M=
+		l2anUoeU1ZHW1Nr3daucAexGbTM=
 		</data>
 		<key>Modules/ThunderSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		Cf6HIBceWf77xa/gBOAdLNS/Y4Y=
+		d33Td7pPSpipPM5zu5z4+q+A/fY=
 		</data>
 		<key>Modules/ThunderSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		2YpzeJ/7yqGJAHFAnn48KHOM+NU=
+		VSGs2bKUgn0Pg1AjRGY1a03xmoM=
 		</data>
 		<key>Modules/ThunderSDK.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
-		49cWUss8OXf77ig+pYzki+GJTqY=
+		D5IN1Dflxab/xfxe7BH2Zy7fUB0=
 		</data>
 		<key>Modules/ThunderSDK.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
 		<data>
-		IFwC5Pgf5w0VXgnvyAuz12rECeI=
+		pwP/LLc2qW8HaL3ON7IJtcQg3hU=
 		</data>
 		<key>Modules/ThunderSDK.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ALc+D6OIU7/dgo0NrCwmM/+N3NI=
+		jv+6bcAO6O5AXxmecViRgRueAgI=
 		</data>
 		<key>Modules/ThunderSDK.swiftmodule/i386.swiftdoc</key>
 		<data>
-		49cWUss8OXf77ig+pYzki+GJTqY=
+		D5IN1Dflxab/xfxe7BH2Zy7fUB0=
 		</data>
 		<key>Modules/ThunderSDK.swiftmodule/i386.swiftinterface</key>
 		<data>
-		IFwC5Pgf5w0VXgnvyAuz12rECeI=
+		pwP/LLc2qW8HaL3ON7IJtcQg3hU=
 		</data>
 		<key>Modules/ThunderSDK.swiftmodule/i386.swiftmodule</key>
 		<data>
-		ALc+D6OIU7/dgo0NrCwmM/+N3NI=
+		jv+6bcAO6O5AXxmecViRgRueAgI=
 		</data>
 		<key>Modules/ThunderSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		qvYcs8KxCEmpy3SS4IuyPepIr/8=
+		tYt/RhcMXvrc/ZWxQMEDSBaP5CY=
 		</data>
 		<key>Modules/ThunderSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		nQhgfEHAtv0+3O6Y+Zp0VqI8nfc=
+		7Mqy9ecatxRfDtxqM76ohKJoQo8=
 		</data>
 		<key>Modules/ThunderSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		GFvG0HiH9CZBCXucdLqYOgg8J2A=
+		5YoWTCFXpS2LJhM20neZuzoFqK0=
 		</data>
 		<key>Modules/ThunderSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		qvYcs8KxCEmpy3SS4IuyPepIr/8=
+		tYt/RhcMXvrc/ZWxQMEDSBaP5CY=
 		</data>
 		<key>Modules/ThunderSDK.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		nQhgfEHAtv0+3O6Y+Zp0VqI8nfc=
+		7Mqy9ecatxRfDtxqM76ohKJoQo8=
 		</data>
 		<key>Modules/ThunderSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		GFvG0HiH9CZBCXucdLqYOgg8J2A=
+		5YoWTCFXpS2LJhM20neZuzoFqK0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -99,11 +99,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MKM4avFR6R12YC23vVCDYPmGfd4=
+			EyeIaTq7EbxWJtM0mfjTiakI1OY=
 			</data>
 			<key>hash2</key>
 			<data>
-			v6SRnhtzJXHVUrvmR2PbD00dsg+n45XpKcxXNErgsrA=
+			qy6WoIM/FnvDqV+yqbKpanH4Y5EuZf/jQ+2jZCCN+Ng=
 			</data>
 		</dict>
 		<key>Headers/ThunderSDK.h</key>
@@ -121,198 +121,198 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			s+x5wU/qg7R3P3BCeLBL0GSqr4M=
+			l2anUoeU1ZHW1Nr3daucAexGbTM=
 			</data>
 			<key>hash2</key>
 			<data>
-			kqGSiipykhqaAv8o0kghv6DBE3BZpnifcWRy4waUPWA=
+			ApQ5VMZtULQ8zG+unMsRuqxnNXPc2M0Yjw08NiJLx5Y=
 			</data>
 		</dict>
 		<key>Modules/ThunderSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Cf6HIBceWf77xa/gBOAdLNS/Y4Y=
+			d33Td7pPSpipPM5zu5z4+q+A/fY=
 			</data>
 			<key>hash2</key>
 			<data>
-			pDOCfBT5KYyNV6o5NeXs/VEU1X+D9PIzGETEuNM82G8=
+			xDCKPxZyh/sF6vgF2WzwFuAalaag47mTmW0o5mDt0TM=
 			</data>
 		</dict>
 		<key>Modules/ThunderSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2YpzeJ/7yqGJAHFAnn48KHOM+NU=
+			VSGs2bKUgn0Pg1AjRGY1a03xmoM=
 			</data>
 			<key>hash2</key>
 			<data>
-			mKJDOsL4vXIzx+ihohLKK1MddYqZAx0oc8wFz5B3HQc=
+			4pIK35CNS22kcUzV5d6qc1MhQ3mt7uP+HvM4gEpofk4=
 			</data>
 		</dict>
 		<key>Modules/ThunderSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			s+x5wU/qg7R3P3BCeLBL0GSqr4M=
+			l2anUoeU1ZHW1Nr3daucAexGbTM=
 			</data>
 			<key>hash2</key>
 			<data>
-			kqGSiipykhqaAv8o0kghv6DBE3BZpnifcWRy4waUPWA=
+			ApQ5VMZtULQ8zG+unMsRuqxnNXPc2M0Yjw08NiJLx5Y=
 			</data>
 		</dict>
 		<key>Modules/ThunderSDK.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Cf6HIBceWf77xa/gBOAdLNS/Y4Y=
+			d33Td7pPSpipPM5zu5z4+q+A/fY=
 			</data>
 			<key>hash2</key>
 			<data>
-			pDOCfBT5KYyNV6o5NeXs/VEU1X+D9PIzGETEuNM82G8=
+			xDCKPxZyh/sF6vgF2WzwFuAalaag47mTmW0o5mDt0TM=
 			</data>
 		</dict>
 		<key>Modules/ThunderSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2YpzeJ/7yqGJAHFAnn48KHOM+NU=
+			VSGs2bKUgn0Pg1AjRGY1a03xmoM=
 			</data>
 			<key>hash2</key>
 			<data>
-			mKJDOsL4vXIzx+ihohLKK1MddYqZAx0oc8wFz5B3HQc=
+			4pIK35CNS22kcUzV5d6qc1MhQ3mt7uP+HvM4gEpofk4=
 			</data>
 		</dict>
 		<key>Modules/ThunderSDK.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			49cWUss8OXf77ig+pYzki+GJTqY=
+			D5IN1Dflxab/xfxe7BH2Zy7fUB0=
 			</data>
 			<key>hash2</key>
 			<data>
-			/jXCtNgLHGKi8T148YJAh1yYQUpxUA+g3CUfp4qQ9KE=
+			3EcMgMJyf458zpm64ghTRSIn2Q9jqMgcED5SLsCjWVE=
 			</data>
 		</dict>
 		<key>Modules/ThunderSDK.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			IFwC5Pgf5w0VXgnvyAuz12rECeI=
+			pwP/LLc2qW8HaL3ON7IJtcQg3hU=
 			</data>
 			<key>hash2</key>
 			<data>
-			T8kn605KtpzN3Djkd2Q1MJoqGeDHz1oqI14qvW6mZVY=
+			xZvQladKczY8gsMWQNxnIleuARCa1jmmGb5GyzMIDRI=
 			</data>
 		</dict>
 		<key>Modules/ThunderSDK.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ALc+D6OIU7/dgo0NrCwmM/+N3NI=
+			jv+6bcAO6O5AXxmecViRgRueAgI=
 			</data>
 			<key>hash2</key>
 			<data>
-			643QgGW3ILNAnmVrvD+LRgxFQs+6TwrWSjo/QODflZY=
+			g6VQ3gTGfcTXSwO6xI/6L8yZ02vK3rNDKJ9JqlhFxD4=
 			</data>
 		</dict>
 		<key>Modules/ThunderSDK.swiftmodule/i386.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			49cWUss8OXf77ig+pYzki+GJTqY=
+			D5IN1Dflxab/xfxe7BH2Zy7fUB0=
 			</data>
 			<key>hash2</key>
 			<data>
-			/jXCtNgLHGKi8T148YJAh1yYQUpxUA+g3CUfp4qQ9KE=
+			3EcMgMJyf458zpm64ghTRSIn2Q9jqMgcED5SLsCjWVE=
 			</data>
 		</dict>
 		<key>Modules/ThunderSDK.swiftmodule/i386.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			IFwC5Pgf5w0VXgnvyAuz12rECeI=
+			pwP/LLc2qW8HaL3ON7IJtcQg3hU=
 			</data>
 			<key>hash2</key>
 			<data>
-			T8kn605KtpzN3Djkd2Q1MJoqGeDHz1oqI14qvW6mZVY=
+			xZvQladKczY8gsMWQNxnIleuARCa1jmmGb5GyzMIDRI=
 			</data>
 		</dict>
 		<key>Modules/ThunderSDK.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ALc+D6OIU7/dgo0NrCwmM/+N3NI=
+			jv+6bcAO6O5AXxmecViRgRueAgI=
 			</data>
 			<key>hash2</key>
 			<data>
-			643QgGW3ILNAnmVrvD+LRgxFQs+6TwrWSjo/QODflZY=
+			g6VQ3gTGfcTXSwO6xI/6L8yZ02vK3rNDKJ9JqlhFxD4=
 			</data>
 		</dict>
 		<key>Modules/ThunderSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qvYcs8KxCEmpy3SS4IuyPepIr/8=
+			tYt/RhcMXvrc/ZWxQMEDSBaP5CY=
 			</data>
 			<key>hash2</key>
 			<data>
-			UkcAh8Y+0QAErmNTWcwYCOKquE9nU98pFJpKaa21XKQ=
+			OVSiwPO0p7zRjJ+NFqA7ASQXM0gIgfMYX2Zr263o4iw=
 			</data>
 		</dict>
 		<key>Modules/ThunderSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nQhgfEHAtv0+3O6Y+Zp0VqI8nfc=
+			7Mqy9ecatxRfDtxqM76ohKJoQo8=
 			</data>
 			<key>hash2</key>
 			<data>
-			l2WeXYrG888soygPnLHM5aU8ztxzCS7+BYTm2XtJMIE=
+			k1OolDeZlfDUMiiWqZkmpEwwjwYrDjbdD4mOQnTPNaU=
 			</data>
 		</dict>
 		<key>Modules/ThunderSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GFvG0HiH9CZBCXucdLqYOgg8J2A=
+			5YoWTCFXpS2LJhM20neZuzoFqK0=
 			</data>
 			<key>hash2</key>
 			<data>
-			IJeWHgp7xWrOBxg/BpT+M0sKRe4OkBIgUX418wF2Bgs=
+			GNPFXLbudVBPkJt81ej2mhc8w23SJk0TUeeuA1+QYYs=
 			</data>
 		</dict>
 		<key>Modules/ThunderSDK.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qvYcs8KxCEmpy3SS4IuyPepIr/8=
+			tYt/RhcMXvrc/ZWxQMEDSBaP5CY=
 			</data>
 			<key>hash2</key>
 			<data>
-			UkcAh8Y+0QAErmNTWcwYCOKquE9nU98pFJpKaa21XKQ=
+			OVSiwPO0p7zRjJ+NFqA7ASQXM0gIgfMYX2Zr263o4iw=
 			</data>
 		</dict>
 		<key>Modules/ThunderSDK.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nQhgfEHAtv0+3O6Y+Zp0VqI8nfc=
+			7Mqy9ecatxRfDtxqM76ohKJoQo8=
 			</data>
 			<key>hash2</key>
 			<data>
-			l2WeXYrG888soygPnLHM5aU8ztxzCS7+BYTm2XtJMIE=
+			k1OolDeZlfDUMiiWqZkmpEwwjwYrDjbdD4mOQnTPNaU=
 			</data>
 		</dict>
 		<key>Modules/ThunderSDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GFvG0HiH9CZBCXucdLqYOgg8J2A=
+			5YoWTCFXpS2LJhM20neZuzoFqK0=
 			</data>
 			<key>hash2</key>
 			<data>
-			IJeWHgp7xWrOBxg/BpT+M0sKRe4OkBIgUX418wF2Bgs=
+			GNPFXLbudVBPkJt81ej2mhc8w23SJk0TUeeuA1+QYYs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
